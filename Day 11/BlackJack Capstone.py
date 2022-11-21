@@ -18,6 +18,7 @@ def calculate_score(card):
 
 def compare(user_score, computer_score):
     # Bug fix. If you and the computer are both over, you lose.
+    # new comment
     if user_score > 21 and computer_score > 21:
         return "You went over. You lose 😤"
     elif user_score == computer_score:
