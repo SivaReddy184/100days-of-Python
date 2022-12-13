@@ -6,8 +6,8 @@ import os
 import smtplib
 
 PLACEHOLDER = "[NAME]"
-MY_EMAIL = "sivasatish780@gmail.com"
-PASSWORD = 'qhvi rzwc tdyy bamn'
+MY_EMAIL = "abc@gmail.com"
+PASSWORD = 'abc'
 
 datetime = dt.datetime.now()
 month = datetime.month
