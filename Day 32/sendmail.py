@@ -4,8 +4,8 @@
 
 import smtplib
 
-gmail_user = 'sivasatish780@gmail.com'
-gmail_app_password = 'qhvi rzwc tdyy bamn'
+gmail_user = 'abc@gmail.com'
+gmail_app_password = 'qavc'
 
 
 sent_from = gmail_user
