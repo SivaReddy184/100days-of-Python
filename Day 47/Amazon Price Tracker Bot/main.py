@@ -15,6 +15,7 @@ headers = {'Accept-Language': "en-US,en;q=0.9",
 response = requests.get(amazon_endpoint, headers=headers)
 soup = BeautifulSoup(response.text, "lxml")
 price = soup.find("span", class_="a-price-whole")
+title = soup.find(id="productTitle")
 
 # ----IF PRICE IS < 1000 ---------
 try:
@@ -38,6 +39,5 @@ if amazon_price < TARGET_PRICE:
         connection.login(MY_EMAIL, PASSWORD)
         connection.sendmail(from_addr=MY_EMAIL,
                             to_addrs=TO,
-                            msg=f"Subject:Amazon Price Alert Reminder\n\nHey! Your amazon item price has gone down "
-                                f"below your target.\nThe current price is {amazon_price}. Go and buy quickly.")
-
+                            msg=f"Subject:Amazon Price Alert Reminder\n\nHey! {title.text.strip()} is now Rs.{amazon_price}."
+                                f" Buy here quickly {amazon_endpoint}")
